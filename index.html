@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Minimal | Design de Impacto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container_header">
+            <div class="logo">STUDIO<span>MINIMAL</span></div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i data-lucide="menu"></i>
+            </div>
+
+            <div class="links_header" id="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Estúdio</a>
+                <a href="#servicos">Expertise</a>
+                <a href="#contato" class="nav-cta">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container-hero">
+                <div class="hero-text">
+                    <span class="badge">Design Minimalista</span>
+                    <h1>Transformamos <br>ideias em <span>arte digital.</span></h1>
+                    <p>Elevamos a percepção da sua marca através de interfaces puras, cores equilibradas e uma
+                        experiência de usuário impecável.</p>
+                    <div class="hero-btns">
+                        <button class="btn-primary">Explorar Projetos <i data-lucide="arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="bento-grid">
+                        <div class="bento-item p-1"
+                            style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=400')">
+                        </div>
+                        <div class="bento-item p-2"
+                            style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400')">
+                        </div>
+                        <div class="bento-item p-3">
+                            <i data-lucide="sparkles"></i>
+                            <span>Inovação constante</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="container_sobre">
+                <div class="section-header">
+                    <small>Nossa Essência</small>
+                    <h2>Onde a estética encontra a funcionalidade.</h2>
+                </div>
+
+                <div class="sobre-grid">
+                    <div class="card bg-pastel-green">
+                        <i data-lucide="compass"></i>
+                        <h3>Estratégia</h3>
+                        <p>Não apenas desenhamos; planejamos cada pixel para guiar o seu cliente ao objetivo final.</p>
+                    </div>
+                    <div class="card bg-pastel-purple">
+                        <i data-lucide="layers"></i>
+                        <h3>Identidade</h3>
+                        <p>Criamos sistemas visuais que respiram a personalidade da sua empresa de forma elegante.</p>
+                    </div>
+                    <div class="card bg-pastel-blue">
+                        <i data-lucide="mouse-pointer-2"></i>
+                        <h3>Interface</h3>
+                        <p>Interfaces intuitivas que eliminam o ruído e focam no que realmente importa: o conteúdo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicos" id="servicos">
+            <div class="container_servicos">
+                <div class="section-header-side">
+                    <h2>Nossa Expertise <span>Especializada</span></h2>
+                    <p>Soluções sob medida para marcas que buscam se destacar pela sofisticação.</p>
+                </div>
+
+                <div class="servicos-grid">
+                    <div class="card-servico">
+                        <div class="icon-box"><i data-lucide="layout"></i></div>
+                        <div>
+                            <h3>Web Design Premium</h3>
+                            <p>Landing pages e sites institucionais com performance e design de vanguarda.</p>
+                        </div>
+                    </div>
+                    <div class="card-servico">
+                        <div class="icon-box"><i data-lucide="palette"></i></div>
+                        <div>
+                            <h3>Branding Minimalista</h3>
+                            <p>Criação de logotipos e paletas que transcendem tendências passageiras.</p>
+                        </div>
+                    </div>
+                    <div class="card-servico">
+                        <div class="icon-box"><i data-lucide="smartphone"></i></div>
+                        <div>
+                            <h3>Mobile First</h3>
+                            <p>Experiências fluidas em qualquer tela, garantindo acessibilidade e beleza.</p>
+                        </div>
+                    </div>
+                    <div class="card-servico">
+                        <div class="icon-box"><i data-lucide="bar-chart-3"></i></div>
+                        <div>
+                            <h3>Consultoria UX</h3>
+                            <p>Análise profunda do comportamento do usuário para otimizar conversões.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="localizacao">
+            <div class="container_mapa">
+                <div class="map-text">
+                    <h3>Presença Global, <br>Coração Local.</h3>
+                    <p><i data-lucide="map-pin"></i> Av. Paulista, 1000 - São Paulo, SP</p>
+                    <p><i data-lucide="mail"></i> hello@studiominimal.com</p>
+                </div>
+                <div class="map-placeholder">
+                    <div class="map-overlay"></div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.065830118314!2d-46.652983!3d-23.564476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da177e7b%3A0x677b1e4284b39755!2sAv.%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1625000000000!5m2!1spt-BR!2sbr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="container_contato">
+                <h2>Pronto para elevar o nível da sua marca?</h2>
+                <p>Estamos aceitando novos projetos para este trimestre.</p>
+                <button class="btn-secondary">Iniciar um projeto <i data-lucide="message-square"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Studio Minimal. Simplicidade é o último grau da sofisticação.</p>
+    </footer>
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+
+        const header = document.querySelector('header');
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        const body = document.body;
+
+        // 1. Efeito de Scroll no Header (Fica fino e com fundo ao rolar)
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // 2. Função para alternar o Menu
+        function toggleMenu() {
+            const isOpen = navLinks.classList.toggle('active');
+
+            // Troca o ícone (Menu para X e vice-versa)
+            const iconName = isOpen ? 'x' : 'menu';
+            menuToggle.innerHTML = `<i data-lucide="${iconName}"></i>`;
+            lucide.createIcons();
+
+            // Impede o scroll do fundo quando o menu está aberto (UX Premium)
+            body.style.overflow = isOpen ? 'hidden' : 'auto';
+        }
+
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Previne fechar imediatamente ao abrir
+            toggleMenu();
+        });
+
+        // 3. Fechar ao clicar em qualquer link
+        document.querySelectorAll('.links_header a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) toggleMenu();
+            });
+        });
+
+        // 4. Fechar ao clicar fora do menu (Overlay behavior)
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                toggleMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>
