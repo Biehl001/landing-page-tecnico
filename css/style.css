@@ -947,6 +947,272 @@ section {
 }
 
 /* ===========================
+   DOWNLOAD APP
+   =========================== */
+.download {
+    background: var(--primary);
+    max-width: 100%;
+    padding: 120px 30px;
+    overflow: hidden;
+}
+
+.container_download {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.download-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent);
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+
+.download-badge i {
+    width: 14px;
+    height: 14px;
+}
+
+.download-content h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--white);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.download-content h2 span {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+}
+
+.download-content > p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+.download-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-install {
+    padding: 18px 36px;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    border-radius: 100px;
+    font-family: inherit;
+}
+
+.btn-install i {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-install:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+}
+
+.download-hint {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Phone Mockup */
+.download-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-mockup {
+    width: 260px;
+    height: 460px;
+    background: #1e1e2e;
+    border-radius: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.phone-notch {
+    width: 100px;
+    height: 24px;
+    background: var(--primary);
+    border-radius: 0 0 16px 16px;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.phone-screen {
+    position: absolute;
+    inset: 3px;
+    border-radius: 37px;
+    background: linear-gradient(145deg, #12122a 0%, #1a1a3e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.phone-app-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--accent);
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(99, 102, 241, 0.6); }
+}
+
+.phone-app-name {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* iOS Instructions Modal */
+.ios-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.ios-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.ios-modal {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 48px 40px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.ios-modal-overlay.active .ios-modal {
+    transform: translateY(0);
+}
+
+.ios-modal h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.ios-modal > p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+.ios-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.ios-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ios-step-number {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ios-step span {
+    font-size: 0.95rem;
+    color: var(--primary);
+    line-height: 1.5;
+}
+
+.ios-modal-close {
+    padding: 14px 32px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    font-family: inherit;
+}
+
+.ios-modal-close:hover {
+    background: var(--accent);
+}
+
+/* ===========================
    LOCATION / LOCALIZACAO
    =========================== */
 .localizacao {
@@ -1425,6 +1691,54 @@ footer {
     .depoimentos-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+
+    /* DOWNLOAD */
+    .download {
+        padding: 80px 24px;
+    }
+
+    .container_download {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .download-content > p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .download-btns {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone-mockup {
+        width: 220px;
+        height: 380px;
+        border-radius: 32px;
+    }
+
+    .phone-screen {
+        border-radius: 29px;
+    }
+
+    .phone-notch {
+        width: 80px;
+        height: 20px;
+    }
+
+    .phone-app-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .ios-modal {
+        padding: 36px 28px;
     }
 
     /* LOCATION */
