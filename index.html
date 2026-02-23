@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Minimal | Design de Impacto</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <header>
         <nav class="container_header">
@@ -20,117 +26,330 @@
             </div>
 
             <div class="links_header" id="nav-links">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Estúdio</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre">Estudio</a>
                 <a href="#servicos">Expertise</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#contato" class="nav-cta">Contato</a>
             </div>
         </nav>
     </header>
 
     <main>
+        <!-- HERO -->
         <section class="hero" id="inicio">
             <div class="container-hero">
                 <div class="hero-text">
-                    <span class="badge">Design Minimalista</span>
-                    <h1>Transformamos <br>ideias em <span>arte digital.</span></h1>
-                    <p>Elevamos a percepção da sua marca através de interfaces puras, cores equilibradas e uma
-                        experiência de usuário impecável.</p>
-                    <div class="hero-btns">
-                        <button class="btn-primary">Explorar Projetos <i data-lucide="arrow-right"></i></button>
+                    <span class="badge anim" data-delay="0">
+                        <i data-lucide="sparkles" class="badge-icon"></i>
+                        Design Minimalista
+                    </span>
+                    <h1 class="anim" data-delay="1">Transformamos <br>ideias em <span>arte digital.</span></h1>
+                    <p class="anim" data-delay="2">Elevamos a percepcao da sua marca atraves de interfaces puras, cores equilibradas e uma experiencia de usuario impecavel.</p>
+                    <div class="hero-btns anim" data-delay="3">
+                        <button class="btn-primary">
+                            Explorar Projetos
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn-ghost">
+                            <i data-lucide="play-circle"></i>
+                            Ver Showreel
+                        </button>
                     </div>
                 </div>
 
-                <div class="hero-visual">
+                <div class="hero-visual anim" data-delay="2">
                     <div class="bento-grid">
                         <div class="bento-item p-1"
-                            style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=400')">
+                            style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=600')">
                         </div>
                         <div class="bento-item p-2"
-                            style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400')">
+                            style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600')">
                         </div>
                         <div class="bento-item p-3">
                             <i data-lucide="sparkles"></i>
-                            <span>Inovação constante</span>
+                            <span>Inovacao constante</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator anim" data-delay="4">
+                <div class="scroll-mouse">
+                    <div class="scroll-dot"></div>
+                </div>
+                <span>Scroll</span>
+            </div>
         </section>
 
+        <!-- STATS RIBBON -->
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="200">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Projetos Entregues</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal" data-delay="1">
+                    <span class="stat-number" data-target="98">0</span>
+                    <span class="stat-suffix">%</span>
+                    <p>Satisfacao dos Clientes</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal" data-delay="2">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-suffix">anos</span>
+                    <p>De Experiencia</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal" data-delay="3">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Premiacoes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
         <section class="sobre" id="sobre">
             <div class="container_sobre">
                 <div class="section-header">
-                    <small>Nossa Essência</small>
-                    <h2>Onde a estética encontra a funcionalidade.</h2>
+                    <small class="reveal">Nossa Essencia</small>
+                    <h2 class="reveal" data-delay="1">Onde a estetica encontra <br><span>a funcionalidade.</span></h2>
                 </div>
 
                 <div class="sobre-grid">
-                    <div class="card bg-pastel-green">
-                        <i data-lucide="compass"></i>
-                        <h3>Estratégia</h3>
-                        <p>Não apenas desenhamos; planejamos cada pixel para guiar o seu cliente ao objetivo final.</p>
+                    <div class="card bg-pastel-green reveal">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="compass"></i>
+                        </div>
+                        <h3>Estrategia</h3>
+                        <p>Nao apenas desenhamos; planejamos cada pixel para guiar o seu cliente ao objetivo final.</p>
+                        <div class="card-line"></div>
                     </div>
-                    <div class="card bg-pastel-purple">
-                        <i data-lucide="layers"></i>
+                    <div class="card bg-pastel-purple reveal" data-delay="1">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="layers"></i>
+                        </div>
                         <h3>Identidade</h3>
                         <p>Criamos sistemas visuais que respiram a personalidade da sua empresa de forma elegante.</p>
+                        <div class="card-line"></div>
                     </div>
-                    <div class="card bg-pastel-blue">
-                        <i data-lucide="mouse-pointer-2"></i>
+                    <div class="card bg-pastel-blue reveal" data-delay="2">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="mouse-pointer-2"></i>
+                        </div>
                         <h3>Interface</h3>
-                        <p>Interfaces intuitivas que eliminam o ruído e focam no que realmente importa: o conteúdo.</p>
+                        <p>Interfaces intuitivas que eliminam o ruido e focam no que realmente importa: o conteudo.</p>
+                        <div class="card-line"></div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- SERVICES -->
         <section class="servicos" id="servicos">
             <div class="container_servicos">
                 <div class="section-header-side">
-                    <h2>Nossa Expertise <span>Especializada</span></h2>
-                    <p>Soluções sob medida para marcas que buscam se destacar pela sofisticação.</p>
+                    <div>
+                        <small class="reveal">O Que Fazemos</small>
+                        <h2 class="reveal" data-delay="1">Nossa Expertise <span>Especializada</span></h2>
+                    </div>
+                    <p class="reveal" data-delay="2">Solucoes sob medida para marcas que buscam se destacar pela sofisticacao.</p>
                 </div>
 
                 <div class="servicos-grid">
-                    <div class="card-servico">
+                    <div class="card-servico reveal">
+                        <div class="servico-number">01</div>
                         <div class="icon-box"><i data-lucide="layout"></i></div>
                         <div>
                             <h3>Web Design Premium</h3>
                             <p>Landing pages e sites institucionais com performance e design de vanguarda.</p>
                         </div>
+                        <i data-lucide="arrow-up-right" class="servico-arrow"></i>
                     </div>
-                    <div class="card-servico">
+                    <div class="card-servico reveal" data-delay="1">
+                        <div class="servico-number">02</div>
                         <div class="icon-box"><i data-lucide="palette"></i></div>
                         <div>
                             <h3>Branding Minimalista</h3>
-                            <p>Criação de logotipos e paletas que transcendem tendências passageiras.</p>
+                            <p>Criacao de logotipos e paletas que transcendem tendencias passageiras.</p>
                         </div>
+                        <i data-lucide="arrow-up-right" class="servico-arrow"></i>
                     </div>
-                    <div class="card-servico">
+                    <div class="card-servico reveal" data-delay="2">
+                        <div class="servico-number">03</div>
                         <div class="icon-box"><i data-lucide="smartphone"></i></div>
                         <div>
                             <h3>Mobile First</h3>
-                            <p>Experiências fluidas em qualquer tela, garantindo acessibilidade e beleza.</p>
+                            <p>Experiencias fluidas em qualquer tela, garantindo acessibilidade e beleza.</p>
                         </div>
+                        <i data-lucide="arrow-up-right" class="servico-arrow"></i>
                     </div>
-                    <div class="card-servico">
+                    <div class="card-servico reveal" data-delay="3">
+                        <div class="servico-number">04</div>
                         <div class="icon-box"><i data-lucide="bar-chart-3"></i></div>
                         <div>
                             <h3>Consultoria UX</h3>
-                            <p>Análise profunda do comportamento do usuário para otimizar conversões.</p>
+                            <p>Analise profunda do comportamento do usuario para otimizar conversoes.</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="servico-arrow"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="processo">
+            <div class="container_processo">
+                <div class="section-header">
+                    <small class="reveal">Como Trabalhamos</small>
+                    <h2 class="reveal" data-delay="1">Um processo pensado <br><span>em cada detalhe.</span></h2>
+                </div>
+
+                <div class="processo-grid">
+                    <div class="processo-step reveal">
+                        <div class="step-number">01</div>
+                        <div class="step-icon"><i data-lucide="search"></i></div>
+                        <h3>Discovery</h3>
+                        <p>Mergulhamos no universo da sua marca para entender visao, valores e objetivos.</p>
+                    </div>
+                    <div class="processo-line reveal" data-delay="1"></div>
+                    <div class="processo-step reveal" data-delay="1">
+                        <div class="step-number">02</div>
+                        <div class="step-icon"><i data-lucide="target"></i></div>
+                        <h3>Estrategia</h3>
+                        <p>Definimos o caminho ideal com base em dados, pesquisa e benchmark de mercado.</p>
+                    </div>
+                    <div class="processo-line reveal" data-delay="2"></div>
+                    <div class="processo-step reveal" data-delay="2">
+                        <div class="step-number">03</div>
+                        <div class="step-icon"><i data-lucide="pen-tool"></i></div>
+                        <h3>Design</h3>
+                        <p>Criamos interfaces e identidades visuais que traduzem a essencia da sua marca.</p>
+                    </div>
+                    <div class="processo-line reveal" data-delay="3"></div>
+                    <div class="processo-step reveal" data-delay="3">
+                        <div class="step-number">04</div>
+                        <div class="step-icon"><i data-lucide="rocket"></i></div>
+                        <h3>Lancamento</h3>
+                        <p>Entregamos o projeto finalizado com suporte completo para o go-live.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio" id="portfolio">
+            <div class="container_portfolio">
+                <div class="section-header">
+                    <small class="reveal">Nosso Trabalho</small>
+                    <h2 class="reveal" data-delay="1">Projetos <span>Selecionados</span></h2>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item large reveal">
+                        <div class="portfolio-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800')">
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-tag">Branding</span>
+                            <h3>Nova Identidade Visual</h3>
+                            <p>Redesign completo da marca Lumina Tech</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="portfolio-arrow"></i>
+                    </div>
+                    <div class="portfolio-item reveal" data-delay="1">
+                        <div class="portfolio-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600')">
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-tag">Web Design</span>
+                            <h3>E-commerce Premium</h3>
+                            <p>Plataforma de moda sustentavel</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="portfolio-arrow"></i>
+                    </div>
+                    <div class="portfolio-item reveal" data-delay="2">
+                        <div class="portfolio-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600')">
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-tag">Dashboard</span>
+                            <h3>Analytics Platform</h3>
+                            <p>Painel de dados intuitivo</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="portfolio-arrow"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="depoimentos">
+            <div class="container_depoimentos">
+                <div class="section-header">
+                    <small class="reveal">Depoimentos</small>
+                    <h2 class="reveal" data-delay="1">O que nossos <span>clientes dizem.</span></h2>
+                </div>
+
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card reveal">
+                        <div class="depoimento-quote">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"O Studio Minimal transformou completamente a percepcao da nossa marca. O resultado superou todas as expectativas."</p>
+                        <div class="depoimento-author">
+                            <div class="author-avatar">M</div>
+                            <div>
+                                <strong>Marina Silva</strong>
+                                <span>CEO, Lumina Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depoimento-card reveal" data-delay="1">
+                        <div class="depoimento-quote">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"Profissionalismo e sensibilidade artistica em cada detalhe. Nosso site agora reflete exatamente quem somos."</p>
+                        <div class="depoimento-author">
+                            <div class="author-avatar">R</div>
+                            <div>
+                                <strong>Rafael Costa</strong>
+                                <span>Diretor, Arco Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depoimento-card reveal" data-delay="2">
+                        <div class="depoimento-quote">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"A equipe entendeu nossa visao desde o primeiro dia. O processo foi fluido e o resultado, impecavel."</p>
+                        <div class="depoimento-author">
+                            <div class="author-avatar">A</div>
+                            <div>
+                                <strong>Ana Beatriz</strong>
+                                <span>Fundadora, Nativa</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- LOCATION -->
         <section class="localizacao">
             <div class="container_mapa">
-                <div class="map-text">
-                    <h3>Presença Global, <br>Coração Local.</h3>
-                    <p><i data-lucide="map-pin"></i> Av. Paulista, 1000 - São Paulo, SP</p>
-                    <p><i data-lucide="mail"></i> hello@studiominimal.com</p>
+                <div class="map-text reveal">
+                    <small>Onde Estamos</small>
+                    <h3>Presenca Global, <br>Coracao Local.</h3>
+                    <div class="map-info">
+                        <p><i data-lucide="map-pin"></i> Av. Paulista, 1000 - Sao Paulo, SP</p>
+                        <p><i data-lucide="mail"></i> hello@studiominimal.com</p>
+                        <p><i data-lucide="phone"></i> +55 (11) 99999-0000</p>
+                    </div>
                 </div>
                 <div class="map-placeholder">
                     <div class="map-overlay"></div>
@@ -141,20 +360,69 @@
             </div>
         </section>
 
+        <!-- CTA / CONTACT -->
         <section class="contato" id="contato">
             <div class="container_contato">
-                <h2>Pronto para elevar o nível da sua marca?</h2>
-                <p>Estamos aceitando novos projetos para este trimestre.</p>
-                <button class="btn-secondary">Iniciar um projeto <i data-lucide="message-square"></i></button>
+                <div class="contato-content reveal">
+                    <small>Vamos Conversar</small>
+                    <h2>Pronto para elevar o nivel da sua marca?</h2>
+                    <p>Estamos aceitando novos projetos para este trimestre. Transforme sua visao em realidade.</p>
+                    <div class="contato-btns">
+                        <button class="btn-secondary">
+                            Iniciar um projeto
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn-outline">
+                            <i data-lucide="calendar"></i>
+                            Agendar Reuniao
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Studio Minimal. Simplicidade é o último grau da sofisticação.</p>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">STUDIO<span>MINIMAL</span></div>
+                    <p>Simplicidade e o ultimo grau da sofisticacao.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navegacao</h4>
+                        <a href="#inicio">Inicio</a>
+                        <a href="#sobre">Estudio</a>
+                        <a href="#servicos">Expertise</a>
+                        <a href="#portfolio">Portfolio</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Social</h4>
+                        <a href="#">Instagram</a>
+                        <a href="#">Behance</a>
+                        <a href="#">Dribbble</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <a href="#">hello@studiominimal.com</a>
+                        <a href="#">+55 (11) 99999-0000</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Studio Minimal. Todos os direitos reservados.</p>
+                <div class="footer-socials">
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="dribbble"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script>
-        // Inicializa os ícones do Lucide
         lucide.createIcons();
 
         const header = document.querySelector('header');
@@ -162,41 +430,105 @@
         const navLinks = document.getElementById('nav-links');
         const body = document.body;
 
-        // 1. Efeito de Scroll no Header (Fica fino e com fundo ao rolar)
+        // Scroll Progress Bar
         window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = progress + '%';
+
+            header.classList.toggle('scrolled', scrollTop > 50);
         });
 
-        // 2. Função para alternar o Menu
+        // Mobile Menu
         function toggleMenu() {
             const isOpen = navLinks.classList.toggle('active');
-
-            // Troca o ícone (Menu para X e vice-versa)
             const iconName = isOpen ? 'x' : 'menu';
             menuToggle.innerHTML = `<i data-lucide="${iconName}"></i>`;
             lucide.createIcons();
-
-            // Impede o scroll do fundo quando o menu está aberto (UX Premium)
             body.style.overflow = isOpen ? 'hidden' : 'auto';
         }
 
         menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Previne fechar imediatamente ao abrir
+            e.stopPropagation();
             toggleMenu();
         });
 
-        // 3. Fechar ao clicar em qualquer link
         document.querySelectorAll('.links_header a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navLinks.classList.contains('active')) toggleMenu();
             });
         });
 
-        // 4. Fechar ao clicar fora do menu (Overlay behavior)
         document.addEventListener('click', (e) => {
             if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
                 toggleMenu();
             }
+        });
+
+        // Scroll-triggered animations with IntersectionObserver
+        const revealElements = document.querySelectorAll('.reveal, .anim');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.delay || 0;
+                    entry.target.style.transitionDelay = (delay * 0.15) + 's';
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Counter Animation for Stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCounter(entry.target, target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(el => counterObserver.observe(el));
+
+        function animateCounter(element, target) {
+            let current = 0;
+            const duration = 2000;
+            const step = target / (duration / 16);
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Smooth hover tilt effect on portfolio items
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                const rect = item.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 30;
+                const rotateY = (centerX - x) / 30;
+                item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
         });
     </script>
 </body>
